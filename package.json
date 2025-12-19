@@ -1,0 +1,22 @@
+{
+  "name": "flisto-web",
+  "version": "1.0.0",
+  "description": "Flisto - Your Food Memory Companion Landing Page",
+  "main": "index.html",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node server.js",
+    "start": "node server.js",
+    "serve": "node server.js"
+  },
+  "keywords": [
+    "flisto",
+    "food",
+    "restaurant",
+    "landing-page"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {}
+}

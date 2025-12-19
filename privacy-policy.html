@@ -4,342 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Privacy Policy - Flisto</title>
-    <style>
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      @keyframes gradient {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Oxygen, Ubuntu, Cantarell, sans-serif;
-        line-height: 1.8;
-        color: #212121;
-        background-color: #fff;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-      }
-
-      /* Header */
-      header {
-        background: linear-gradient(135deg, #f57c00 0%, #ff9800 100%);
-        background-size: 200% 200%;
-        animation: gradient 5s ease infinite;
-        color: white;
-        padding: 2rem 0;
-        text-align: center;
-        box-shadow: 0 4px 20px rgba(245, 124, 0, 0.3);
-        position: relative;
-        overflow: hidden;
-      }
-
-      header::before {
-        content: "";
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(
-          circle,
-          rgba(255, 255, 255, 0.1) 1px,
-          transparent 1px
-        );
-        background-size: 50px 50px;
-        animation: gradient 20s ease infinite;
-        opacity: 0.3;
-      }
-
-      .header-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-        position: relative;
-        z-index: 1;
-      }
-
-      .header-content h1 {
-        font-size: 2.5rem;
-        font-weight: 800;
-        margin-bottom: 0.5rem;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        animation: fadeInUp 0.8s ease-out;
-      }
-
-      .back-link {
-        display: inline-block;
-        color: white;
-        text-decoration: none;
-        margin-top: 1rem;
-        opacity: 0.9;
-        transition: all 0.3s ease;
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-        border-radius: 8px;
-        background: rgba(255, 255, 255, 0.1);
-      }
-
-      .back-link:hover {
-        opacity: 1;
-        background: rgba(255, 255, 255, 0.2);
-        transform: translateX(-5px);
-      }
-
-      /* Main Content */
-      .container {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 3rem 20px;
-        flex: 1;
-        animation: fadeInUp 0.8s ease-out 0.2s both;
-      }
-
-      .last-updated {
-        color: #757575;
-        font-style: italic;
-        margin-bottom: 2rem;
-        padding: 1rem;
-        background: #fff5e6;
-        border-left: 4px solid #f57c00;
-        border-radius: 8px;
-      }
-
-      .intro {
-        font-size: 1.1rem;
-        color: #555555;
-        margin-bottom: 3rem;
-        line-height: 1.8;
-      }
-
-      h2 {
-        color: #212121;
-        margin-top: 3rem;
-        margin-bottom: 1rem;
-        font-size: 1.8rem;
-        font-weight: 700;
-        position: relative;
-        padding-bottom: 0.5rem;
-      }
-
-      h2::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 60px;
-        height: 3px;
-        background: linear-gradient(90deg, #f57c00, #ff9800);
-        border-radius: 2px;
-      }
-
-      h3 {
-        color: #f57c00;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-        font-size: 1.3rem;
-        font-weight: 600;
-      }
-
-      p {
-        margin: 1rem 0;
-        color: #555555;
-        line-height: 1.8;
-      }
-
-      ul {
-        margin: 1rem 0;
-        padding-left: 2rem;
-      }
-
-      li {
-        margin: 0.8rem 0;
-        color: #555555;
-        line-height: 1.8;
-      }
-
-      li strong {
-        color: #212121;
-        font-weight: 600;
-      }
-
-      a {
-        color: #0a7ea4;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        border-bottom: 2px solid transparent;
-      }
-
-      a:hover {
-        color: #f57c00;
-        border-bottom-color: #f57c00;
-      }
-
-      .contact {
-        background: linear-gradient(135deg, #fff5e6 0%, #ffe0b2 100%);
-        padding: 2rem;
-        border-radius: 12px;
-        margin-top: 3rem;
-        border-left: 4px solid #f57c00;
-        box-shadow: 0 4px 12px rgba(245, 124, 0, 0.1);
-      }
-
-      .contact p {
-        font-weight: 600;
-        color: #212121;
-        margin-bottom: 1rem;
-      }
-
-      .contact ul {
-        list-style: none;
-        padding-left: 0;
-      }
-
-      .contact li {
-        margin: 0.5rem 0;
-      }
-
-      .contact a {
-        color: #f57c00;
-        font-weight: 600;
-      }
-
-      .contact a:hover {
-        color: #ff9800;
-      }
-
-      /* Footer */
-      footer {
-        background: linear-gradient(180deg, #121212 0%, #1a1a1a 100%);
-        color: #e0e0e0;
-        padding: 2rem 0;
-        text-align: center;
-        position: relative;
-      }
-
-      footer::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 1px;
-        background: linear-gradient(90deg, transparent, #f57c00, transparent);
-      }
-
-      .footer-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      .footer-links {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        margin-bottom: 1rem;
-        flex-wrap: wrap;
-      }
-
-      .footer-links a {
-        color: #e0e0e0;
-        text-decoration: none;
-        opacity: 0.9;
-        transition: all 0.3s ease;
-        padding: 0.5rem 1rem;
-        border-radius: 8px;
-        position: relative;
-      }
-
-      .footer-links a::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0;
-        height: 2px;
-        background: #ff9800;
-        transition: width 0.3s ease;
-      }
-
-      .footer-links a:hover {
-        color: #ff9800;
-        opacity: 1;
-        background: rgba(255, 152, 0, 0.1);
-      }
-
-      .footer-links a:hover::after {
-        width: 80%;
-      }
-
-      .copyright {
-        margin-top: 1rem;
-        opacity: 0.7;
-        font-size: 0.9rem;
-      }
-
-      /* Responsive */
-      @media (max-width: 768px) {
-        .header-content h1 {
-          font-size: 2rem;
-        }
-
-        .container {
-          padding: 2rem 15px;
-        }
-
-        h2 {
-          font-size: 1.5rem;
-        }
-
-        h3 {
-          font-size: 1.2rem;
-        }
-
-        .contact {
-          padding: 1.5rem;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header>
-      <div class="header-content">
-        <h1>Privacy Policy</h1>
-        <a href="index.html" class="back-link">← Back to Home</a>
-      </div>
-    </header>
+    <!-- Header section will be loaded here -->
+    <div id="header-section"></div>
 
     <main>
+      <section class="policy-hero">
+        <div class="policy-hero-content">
+          <h1>Privacy Policy</h1>
+          <p>Your privacy is important to us</p>
+        </div>
+      </section>
+
       <div class="container">
         <p class="last-updated">Last Updated: <span id="lastUpdated"></span></p>
 
@@ -625,25 +303,23 @@
       </div>
     </main>
 
-    <footer>
-      <div class="footer-content">
-        <div class="footer-links">
-          <a href="index.html">Home</a>
-          <a href="privacy-policy.html">Privacy Policy</a>
-          <a href="mailto:flistoapp@gmail.com">Contact Us</a>
-        </div>
-        <div class="copyright">&copy; 2024 Flisto. All rights reserved.</div>
-      </div>
-    </footer>
+    <!-- Footer section will be loaded here -->
+    <div id="footer-section"></div>
 
+    <script src="js/load-sections.js"></script>
+    <script src="js/script.js"></script>
     <script>
       // Set the last updated date
-      document.getElementById("lastUpdated").textContent =
-        new Date().toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        });
+      document.addEventListener("DOMContentLoaded", () => {
+        const lastUpdatedEl = document.getElementById("lastUpdated");
+        if (lastUpdatedEl) {
+          lastUpdatedEl.textContent = new Date().toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          });
+        }
+      });
     </script>
   </body>
 </html>
