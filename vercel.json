@@ -13,6 +13,14 @@
       "dest": "/privacy-policy.html"
     },
     {
+      "src": "/privacy",
+      "dest": "/privacy-policy.html"
+    },
+    {
+      "src": "/terms",
+      "dest": "/terms.html"
+    },
+    {
       "src": "/",
       "dest": "/index.html"
     },

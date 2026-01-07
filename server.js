@@ -21,6 +21,8 @@ const MIME_TYPES = {
 const routes = {
   "/": "index.html",
   "/privacy-policy": "privacy-policy.html",
+  "/privacy": "privacy-policy.html",
+  "/terms": "terms.html",
 };
 
 function getMimeType(filePath) {
@@ -79,6 +81,8 @@ server.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}/`);
   console.log(`📄 Landing page: http://localhost:${PORT}/`);
   console.log(`📋 Privacy policy: http://localhost:${PORT}/privacy-policy`);
+  console.log(`🔒 Privacy: http://localhost:${PORT}/privacy`);
+  console.log(`📜 Terms: http://localhost:${PORT}/terms`);
 });
 
 server.on("error", (err) => {
