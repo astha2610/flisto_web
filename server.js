@@ -45,7 +45,14 @@ function serveFile(filePath, res) {
 
 const server = http.createServer((req, res) => {
   const parsedUrl = url.parse(req.url, true);
-  let pathname = parsedUrl.pathname;
+  let pathname = parsedUrl.pathname.replace(/\/$/, "") || "/";
+
+  // App share links: /share/{shareId} → same bridge page as production (see vercel.json).
+  const shareMatch = pathname.match(/^\/share\/([^/]+)$/);
+  if (shareMatch) {
+    serveFile(path.join(__dirname, "share.html"), res);
+    return;
+  }
 
   // Handle routing
   if (routes[pathname]) {

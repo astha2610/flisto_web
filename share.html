@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open in Flisto</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #0f0f12;
+        --card: #1a1a21;
+        --text: #f4f4f5;
+        --muted: #a1a1aa;
+        --accent: #8b5cf6;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        background: var(--bg);
+        color: var(--text);
+      }
+      .card {
+        max-width: 400px;
+        width: 100%;
+        background: var(--card);
+        border-radius: 16px;
+        padding: 28px;
+        text-align: center;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+      }
+      h1 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 0 0 8px;
+      }
+      p {
+        color: var(--muted);
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin: 0 0 20px;
+      }
+      .btn {
+        display: block;
+        width: 100%;
+        padding: 14px 18px;
+        border-radius: 12px;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        margin-bottom: 10px;
+        border: none;
+        cursor: pointer;
+      }
+      .btn-primary {
+        background: var(--accent);
+        color: #fff;
+      }
+      .stores {
+        display: flex;
+        gap: 10px;
+        margin-top: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .stores a {
+        color: var(--muted);
+        font-size: 0.875rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1 id="title">Opening Flisto…</h1>
+      <p id="subtitle">If nothing happens, tap the button below or get the app.</p>
+      <a id="open-app" class="btn btn-primary" href="#">Open in Flisto</a>
+      <div class="stores">
+        <a href="https://apps.apple.com/app/flisto">App Store</a>
+        <span style="color: var(--muted)">·</span>
+        <a href="https://play.google.com/store/apps/details?id=com.foodmemory.app"
+          >Google Play</a
+        >
+      </div>
+    </div>
+    <script>
+      (function () {
+        var parts = location.pathname.split("/").filter(Boolean);
+        var shareId =
+          parts[0] === "share" && parts[1] ? parts[1].trim() : null;
+        var deepLink = shareId
+          ? "foodmemory://share/" + encodeURIComponent(shareId)
+          : null;
+
+        var titleEl = document.getElementById("title");
+        var subEl = document.getElementById("subtitle");
+        var openEl = document.getElementById("open-app");
+
+        if (!shareId) {
+          titleEl.textContent = "Invalid link";
+          subEl.textContent = "This share link is missing an id.";
+          openEl.style.display = "none";
+          return;
+        }
+
+        openEl.setAttribute("href", deepLink);
+
+        // Attempt to open the app (works on many mobile browsers when the scheme is registered).
+        setTimeout(function () {
+          window.location.href = deepLink;
+        }, 200);
+      })();
+    </script>
+  </body>
+</html>

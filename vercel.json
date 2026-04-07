@@ -9,6 +9,10 @@
   ],
   "routes": [
     {
+      "src": "/share/(.+)",
+      "dest": "/share.html"
+    },
+    {
       "src": "/privacy-policy",
       "dest": "/privacy-policy.html"
     },
