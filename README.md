@@ -6,7 +6,7 @@ A modular, maintainable landing page for Flisto built with HTML, CSS, and JavaSc
 
 ```
 flisto_web/
-├── index.html          # Landing page at / (uses dynamic sections)
+├── index.html          # Landing page at / (built from components via build.js)
 ├── privacy-policy.html # Privacy policy at /privacy-policy
 ├── build.js            # Build script to combine sections (optional)
 ├── package.json        # Node.js dependencies and scripts
@@ -21,7 +21,10 @@ flisto_web/
 │   ├── hero.html
 │   ├── how-it-works.html
 │   ├── features.html
+│   ├── analytics-deep-dive.html
+│   ├── share-section.html
 │   ├── screenshots.html
+│   ├── referrals.html
 │   ├── cta.html
 │   └── footer.html
 └── images/             # Image assets

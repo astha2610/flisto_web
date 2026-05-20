@@ -4,33 +4,705 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flisto - Your Food Memory Companion</title>
+    <meta
+      name="description"
+      content="Flisto is your food memory journal: scan Indian restaurant bills with AI, rate dishes, organize collections, explore analytics, and share picks with friends."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.flisto.in/" />
+    <meta property="og:title" content="Flisto - Your Food Memory Companion" />
+    <meta
+      property="og:description"
+      content="Capture dining experiences, organize collections, understand your habits with analytics, and share restaurants with friends."
+    />
+    <meta property="og:site_name" content="Flisto" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Flisto - Your Food Memory Companion" />
+    <meta
+      name="twitter:description"
+      content="Scan bills, remember dishes, track spend in ₹, and share your favorite spots."
+    />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <!-- Header section will be loaded here -->
-    <div id="header-section"></div>
+    <header>
+      <div class="header-content">
+        <a href="/" class="logo-container">
+          <img src="icons/app_icon.png" alt="Flisto" class="logo-icon" />
+          <div class="logo-text">
+            <h1>Flisto</h1>
+            <p class="tagline">Dine. Snap. Remember.</p>
+          </div>
+        </a>
+        <nav class="header-nav">
+          <ul class="nav-links">
+            <li><a href="/#how-it-works">How It Works</a></li>
+            <li><a href="/#features">Features</a></li>
+            <li><a href="/#collections">Collections</a></li>
+            <li><a href="/#analytics">Analytics</a></li>
+            <li><a href="/#share-friends">Share</a></li>
+            <li><a href="/#screenshots">Screenshots</a></li>
+            <li><a href="/#download">Download</a></li>
+          </ul>
+          <div class="header-cta">
+            <a
+              href="https://apps.apple.com/app/flisto"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="header-download-btn"
+            >
+              <svg class="app-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.14 3.74-4.66.41 1.97-1.14 3.94-3.74 4.66z"
+                />
+              </svg>
+              <div class="app-text">
+                <span class="app-text-small">Download on the</span>
+                <span class="app-text-large">App Store</span>
+              </div>
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.foodmemory.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="header-download-btn"
+            >
+              <svg class="app-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.05L13.69,12L3.84,21.95C3.34,21.61 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.94C20.5,11.34 20.75,11.8 20.75,12.35C20.75,12.9 20.5,13.36 20.16,13.76L14.6,19.81L12.4,17.61L17.96,11.56L20.16,10.94M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"
+                />
+              </svg>
+              <div class="app-text">
+                <span class="app-text-small">Get it on</span>
+                <span class="app-text-large">Google Play</span>
+              </div>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
 
     <main>
-      <!-- Hero section will be loaded here -->
-      <div id="hero-section"></div>
+      <section class="hero">
+        <div class="hero-content">
+          <div class="hero-text">
+            <!-- <p class="hero-pillars">Capture · Remember · Organize · Share</p> -->
+            <h2>
+              Never Forget Your <span class="highlight">Favorite Meals</span>
+            </h2>
+            <p>
+              Flisto helps you capture every dining experience, remember what
+              you loved, organize places into collections, and share picks with
+              friends. Scan a bill, pick from your gallery, or add manually—then
+              build a journal that syncs securely in the cloud.
+            </p>
+            <ul class="hero-bullets">
+              <li>AI bill scanning tuned for Indian restaurant receipts</li>
+              <li>Google Places search and map pin for every venue</li>
+              <li>Dish-level Loved, Okay, and Disliked ratings with photos</li>
+            </ul>
+            <div
+              class="cta-buttons"
+              style="
+                justify-content: flex-start;
+                margin-top: 2rem;
+                gap: 1rem;
+                flex-wrap: wrap;
+              "
+            >
+              <a
+                href="https://apps.apple.com/app/flisto"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="app-download-btn white"
+              >
+                <svg class="app-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.14 3.74-4.66.41 1.97-1.14 3.94-3.74 4.66z"
+                  />
+                </svg>
+                <div class="app-text">
+                  <span class="app-text-small">Download on the</span>
+                  <span class="app-text-large">App Store</span>
+                </div>
+              </a>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.foodmemory.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="app-download-btn white"
+              >
+                <svg class="app-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.05L13.69,12L3.84,21.95C3.34,21.61 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.94C20.5,11.34 20.75,11.8 20.75,12.35C20.75,12.9 20.5,13.36 20.16,13.76L14.6,19.81L12.4,17.61L17.96,11.56L20.16,10.94M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"
+                  />
+                </svg>
+                <div class="app-text">
+                  <span class="app-text-small">Get it on</span>
+                  <span class="app-text-large">Google Play</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="hero-phone">
+            <div class="phone-mockup">
+              <img src="images/listing.png" alt="Flisto home — your food library" />
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <!-- How It Works section will be loaded here -->
-      <div id="how-it-works-section"></div>
+      <section class="social-proof-strip" aria-label="Product highlights">
+        <div class="social-proof-inner">
+          <span>Built for diners in India</span>
+          <span class="social-proof-divider" aria-hidden="true">·</span>
+          <span>₹ spend tracking &amp; analytics</span>
+          <span class="social-proof-divider" aria-hidden="true">·</span>
+          <span>Indian restaurant bill OCR</span>
+        </div>
+      </section>
 
-      <!-- Features section will be loaded here -->
-      <div id="features-section"></div>
 
-      <!-- Screenshots section will be loaded here -->
-      <div id="screenshots-section"></div>
+      <section class="how-it-works" id="how-it-works">
+        <div class="how-it-works-content">
+          <div class="how-it-works-left">
+            <h2>Simple Steps to Your Food Memory</h2>
+            <p class="how-it-works-intro">
+              From your first bill scan to sharing a list with friends, Flisto
+              keeps the flow simple. Capture once, organize into collections,
+              understand your habits with analytics, and never lose a great meal.
+            </p>
+            <div class="steps-container">
+              <div class="step-card fade-in-up">
+                <div class="step-number">01</div>
+                <h3>Capture Your Visit</h3>
+                <p>
+                  Snap a bill photo, pick from your gallery, or add a place
+                  manually. AI extracts line items from Indian restaurant
+                  receipts—then you review before saving.
+                </p>
+              </div>
+              <div class="step-card fade-in-up">
+                <div class="step-number">02</div>
+                <h3>Rate &amp; Organize</h3>
+                <p>
+                  Mark dishes as Loved, Okay, or Disliked. Add visits, photos,
+                  and notes—then sort places into Favorites, Want to Visit, or
+                  custom emoji collections.
+                </p>
+              </div>
+              <div class="step-card fade-in-up">
+                <div class="step-number">03</div>
+                <h3>Track Over Time</h3>
+                <p>
+                  Log multiple visits per restaurant with spend totals, visit
+                  history, and dish galleries. Search and filter your library by
+                  city, recency, or distance.
+                </p>
+              </div>
+              <div class="step-card fade-in-up">
+                <div class="step-number">04</div>
+                <h3>Discover &amp; Share</h3>
+                <p>
+                  Explore analytics across spend, food taste, and places. Share
+                  a restaurant or whole collection with friends—or send a link
+                  so they can save your pick to Want to Visit.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="how-it-works-right">
+            <div class="how-it-works-phone">
+              <img src="images/add.png" alt="Flisto — add a restaurant bill" />
+            </div>
+            <div class="how-it-works-cta">
+              <p>
+                Your food memories, visits, and collections—all in one app.
+              </p>
+              <a href="#download" class="btn">Download App</a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <!-- CTA section will be loaded here -->
-      <div id="cta-section"></div>
+
+      <section class="features" id="features">
+        <div class="features-header">
+          <p class="features-intro">
+            Everything in one app: smart bill capture, dish-level memory,
+            collections, rich analytics, friends and link sharing, referral
+            rewards, and secure cloud sync across devices.
+          </p>
+          <h2>Key Features</h2>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card fade-in-up" id="collections">
+            <h3>Smart Bill Scanning</h3>
+            <p>
+              AI-powered OCR extracts restaurant details, line items, and prices
+              from bill photos—tuned for Indian restaurant receipts. Review and
+              edit before you save.
+            </p>
+            <div class="feature-visual">
+              <img
+                src="images/add.png"
+                alt="Bill scanning in Flisto"
+                class="feature-phone"
+              />
+            </div>
+          </div>
+          <div class="feature-card fade-in-up">
+            <h3>Add Your Way</h3>
+            <p>
+              Scan a bill, pick from your gallery, or enter manually. Google
+              Places autocomplete and map pin help you place every venue. Smart
+              matching suggests merging with an existing restaurant.
+            </p>
+            <div class="feature-visual">
+              <img
+                src="images/edit.png"
+                alt="Add or edit a restaurant in Flisto"
+                class="feature-phone"
+              />
+            </div>
+          </div>
+          <div class="feature-card fade-in-up">
+            <h3>Visit &amp; Dish Memory</h3>
+            <p>
+              Log multiple visits with spend totals and bill photos. Rate each
+              dish Loved, Okay, or Disliked, attach dish photos, and browse what
+              you have eaten at every place.
+            </p>
+            <div class="feature-visual">
+              <img
+                src="images/details.png"
+                alt="Restaurant detail with visits and dishes"
+                class="feature-phone"
+              />
+            </div>
+          </div>
+          <div class="feature-card fade-in-up">
+            <h3>Collections</h3>
+            <p>
+              Favorites and Want to Visit lists are ready on day one. Create
+              custom collections with emoji covers, add places from home or
+              detail screens, and share entire lists with friends.
+            </p>
+            <div class="feature-visual">
+              <img
+                src="images/collections.png"
+                alt="Collections in Flisto"
+                class="feature-phone"
+              />
+            </div>
+          </div>
+          <div class="feature-card fade-in-up">
+            <h3>Home Library</h3>
+            <p>
+              Search restaurants, dishes, and memories. Sort by recent visit,
+              name, most visits, spend, or distance. Filter by city or near me
+              when location is available.
+            </p>
+            <div class="feature-visual">
+              <img
+                src="images/listing.png"
+                alt="Home library of restaurants"
+                class="feature-phone"
+              />
+            </div>
+          </div>
+          <div class="feature-card fade-in-up" id="analytics">
+            <h3>Analytics Dashboard</h3>
+            <p>
+              Four insight tabs—Overview, Spend, Food, and Places—with filters
+              by month or year. Track ₹ spending, liked dishes, cuisines, and
+              how often you explore new spots.
+            </p>
+            <div class="feature-visual">
+              <img
+                src="images/analytics.png"
+                alt="Analytics in Flisto"
+                class="feature-phone"
+              />
+            </div>
+          </div>
+          <div class="feature-card fade-in-up" id="share">
+            <h3>Share Restaurants &amp; Lists</h3>
+            <p>
+              Send a restaurant or collection to a friend in the app, or share a
+              link anyone can open. Recipients can save your pick straight to
+              Want to Visit—even before they have visited.
+            </p>
+            <div class="feature-visual">
+              <img
+                src="images/share.png"
+                alt="Sharing in Flisto"
+                class="feature-phone"
+              />
+            </div>
+          </div>
+          <div class="feature-card fade-in-up">
+            <h3>Friends &amp; Sign In</h3>
+            <p>
+              Find friends, send requests, and build your food circle. Sign in
+              with email, Google, or Apple—your memories and photos sync
+              securely across devices.
+            </p>
+            <div class="feature-visual">
+              <img
+                src="images/login.png"
+                alt="Sign in with Apple, Google, or email"
+                class="feature-phone"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="analytics-deep-dive" id="analytics-insights">
+        <div class="analytics-deep-dive-inner">
+          <div class="analytics-layout">
+            <div class="analytics-intro">
+              <span class="analytics-eyebrow">Analytics hub</span>
+              <h2>Understand Your Dining Habits</h2>
+              <p class="analytics-subtitle">
+                Same four tabs as the app—filter by week, month, or year and see
+                spend, taste, and place patterns in ₹.
+              </p>
+              <div class="analytics-tabs" role="list" aria-label="Analytics tabs in the app">
+                <span class="analytics-tab analytics-tab-active" role="listitem">Overview</span>
+                <span class="analytics-tab" role="listitem">Spend</span>
+                <span class="analytics-tab" role="listitem">Food</span>
+                <span class="analytics-tab" role="listitem">Places</span>
+              </div>
+            </div>
+
+            <div class="analytics-grid">
+              <article class="analytics-card fade-in-up">
+                <div class="analytics-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 19V5M10 19V9M16 19V13M22 19V3" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="analytics-card-body">
+                  <h3>Overview</h3>
+                  <ul>
+                    <li>Total spend &amp; visit count</li>
+                    <li>Places visited &amp; avg per visit</li>
+                    <li>New spots &amp; dishes logged</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="analytics-card fade-in-up">
+                <div class="analytics-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="analytics-card-body">
+                  <h3>Spend</h3>
+                  <ul>
+                    <li>Period-over-period compare</li>
+                    <li>Biggest bill &amp; monthly bars</li>
+                    <li>Top restaurants by spend</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="analytics-card fade-in-up">
+                <div class="analytics-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2a3 3 0 0 0-3 3v1H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-2V5a3 3 0 0 0-3-3z" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 14h6M9 11h6" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="analytics-card-body">
+                  <h3>Food</h3>
+                  <ul>
+                    <li>Liked % &amp; rating breakdown</li>
+                    <li>Cuisine distribution</li>
+                    <li>Most loved &amp; logged dishes</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="analytics-card analytics-card-accent fade-in-up">
+                <div class="analytics-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="12" cy="10" r="2.5"/>
+                  </svg>
+                </div>
+                <div class="analytics-card-body">
+                  <h3>Places</h3>
+                  <ul>
+                    <li>New vs repeat restaurants</li>
+                    <li>Return visits &amp; exploration %</li>
+                    <li>Most visited &amp; most spent</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="share-section" id="share-friends">
+        <div class="share-section-content">
+          <div class="share-section-text">
+            <h2>Share Picks With Friends</h2>
+            <p>
+              Found a great spot? Send the restaurant or an entire collection to
+              a friend inside Flisto, or copy a link that opens on
+              <strong>flisto.in</strong>—perfect for WhatsApp and messages.
+            </p>
+            <ul class="share-section-list">
+              <li>Share to a connected friend with an optional note</li>
+              <li>Public links open the app or prompt a download</li>
+              <li>Save shared restaurants to your Want to Visit list</li>
+              <li>Browse collections shared with you in one place</li>
+            </ul>
+            <a href="#download" class="btn">Get Flisto Free</a>
+          </div>
+          <div class="share-section-visual">
+            <div class="phone-mockup">
+              <img
+                src="images/share.png"
+                alt="Share a restaurant in Flisto"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="screenshots" id="screenshots">
+        <div class="container">
+          <h2>See Flisto in Action</h2>
+          <p class="screenshots-subtitle">
+            Explore the app from your food library to analytics, collections,
+            sharing, and account settings.
+          </p>
+          <div class="screenshot-carousel-wrapper">
+            <button class="carousel-nav prev" onclick="scrollCarousel(-1)" aria-label="Previous screenshot">
+              ‹
+            </button>
+            <div class="screenshot-carousel" id="screenshotCarousel">
+              <div class="screenshot-item">
+                <div class="screenshot-frame">
+                  <img src="images/login.png" alt="Flisto sign in" />
+                </div>
+                <div class="screenshot-label">
+                  <h3>Sign In</h3>
+                  <p>Apple, Google, or email — Dine. Snap. Remember.</p>
+                </div>
+              </div>
+              <div class="screenshot-item">
+                <div class="screenshot-frame">
+                  <img src="images/listing.png" alt="Flisto home — food library" />
+                </div>
+                <div class="screenshot-label">
+                  <h3>Home</h3>
+                  <p>Your food library with search and filters</p>
+                </div>
+              </div>
+              <div class="screenshot-item">
+                <div class="screenshot-frame">
+                  <img src="images/add.png" alt="Flisto — add restaurant bill" />
+                </div>
+                <div class="screenshot-label">
+                  <h3>Scan a Bill</h3>
+                  <p>AI-powered line-item extraction</p>
+                </div>
+              </div>
+              <div class="screenshot-item">
+                <div class="screenshot-frame">
+                  <img src="images/details.png" alt="Flisto restaurant memory" />
+                </div>
+                <div class="screenshot-label">
+                  <h3>Restaurant Memory</h3>
+                  <p>Visits, spend, and dish ratings</p>
+                </div>
+              </div>
+              <div class="screenshot-item">
+                <div class="screenshot-frame">
+                  <img src="images/collections.png" alt="Flisto collections" />
+                </div>
+                <div class="screenshot-label">
+                  <h3>Collections</h3>
+                  <p>Favorites, Want to Visit, and custom lists</p>
+                </div>
+              </div>
+              <div class="screenshot-item">
+                <div class="screenshot-frame">
+                  <img src="images/analytics.png" alt="Flisto analytics dashboard" />
+                </div>
+                <div class="screenshot-label">
+                  <h3>Analytics</h3>
+                  <p>Spend, food taste, and place insights in ₹</p>
+                </div>
+              </div>
+              <div class="screenshot-item">
+                <div class="screenshot-frame">
+                  <img src="images/share.png" alt="Flisto share restaurant" />
+                </div>
+                <div class="screenshot-label">
+                  <h3>Share</h3>
+                  <p>Send restaurants and lists to friends</p>
+                </div>
+              </div>
+              <div class="screenshot-item">
+                <div class="screenshot-frame">
+                  <img src="images/friends.png" alt="Flisto friends list" />
+                </div>
+                <div class="screenshot-label">
+                  <h3>Friends</h3>
+                  <p>Find friends and manage requests</p>
+                </div>
+              </div>
+              <div class="screenshot-item">
+                <div class="screenshot-frame">
+                  <img src="images/profile.png" alt="Flisto profile and referrals" />
+                </div>
+                <div class="screenshot-label">
+                  <h3>Profile</h3>
+                  <p>Stats, food points, and invite friends</p>
+                </div>
+              </div>
+              <div class="screenshot-item">
+                <div class="screenshot-frame">
+                  <img src="images/settings.png" alt="Flisto settings" />
+                </div>
+                <div class="screenshot-label">
+                  <h3>Settings</h3>
+                  <p>Theme, notifications, and account security</p>
+                </div>
+              </div>
+              <div class="screenshot-item">
+                <div class="screenshot-frame">
+                  <img src="images/help.png" alt="Flisto help and support" />
+                </div>
+                <div class="screenshot-label">
+                  <h3>Help &amp; Support</h3>
+                  <p>FAQs and contact support</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-nav next" onclick="scrollCarousel(1)" aria-label="Next screenshot">
+              ›
+            </button>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="referrals" id="referrals">
+        <div class="referrals-inner">
+          <div class="referrals-text">
+            <h2>Invite Friends, Earn Food Points</h2>
+            <p>
+              Every Flisto user gets a personal referral code. When a friend
+              joins with your code, you both earn <strong>50 food points</strong>.
+              Track your balance and history from your profile.
+            </p>
+          </div>
+          <div class="referrals-cta">
+            <p class="referrals-note">Download the app and enter a code at signup.</p>
+            <a href="#download" class="btn btn-referrals">Start Your Food Memory</a>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="cta" id="download">
+        <div class="cta-content">
+          <div class="cta-text">
+            <h2>Ready to Build Your Food Memory?</h2>
+            <p>
+              Download Flisto to scan bills, rate dishes, organize collections,
+              explore analytics, and share your favorite spots with friends.
+              Free on iOS and Android.
+            </p>
+            <div
+              class="cta-buttons"
+              style="justify-content: flex-start; gap: 1rem; flex-wrap: wrap"
+            >
+              <a
+                href="https://apps.apple.com/app/flisto"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="app-download-btn"
+              >
+                <svg class="app-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.14 3.74-4.66.41 1.97-1.14 3.94-3.74 4.66z"
+                  />
+                </svg>
+                <div class="app-text">
+                  <span class="app-text-small">Download on the</span>
+                  <span class="app-text-large">App Store</span>
+                </div>
+              </a>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.foodmemory.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="app-download-btn"
+              >
+                <svg class="app-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.05L13.69,12L3.84,21.95C3.34,21.61 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.94C20.5,11.34 20.75,11.8 20.75,12.35C20.75,12.9 20.5,13.36 20.16,13.76L14.6,19.81L12.4,17.61L17.96,11.56L20.16,10.94M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"
+                  />
+                </svg>
+                <div class="app-text">
+                  <span class="app-text-small">Get it on</span>
+                  <span class="app-text-large">Google Play</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="cta-phone">
+            <div class="phone-mockup">
+              <img src="images/login.png" alt="Flisto — sign in with Apple, Google, or email" />
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
 
-    <!-- Footer section will be loaded here -->
-    <div id="footer-section"></div>
+<footer>
+  <div class="footer-content">
+    <div class="footer-main">
+      <div class="footer-left">
+        <div class="footer-logo">Flisto</div>
+        <div class="copyright">&copy; 2026 All Rights Reserved</div>
+        <a href="mailto:flistoapp@gmail.com" class="footer-support">flistoapp@gmail.com</a>
+      </div>
+      <nav class="footer-nav">
+        <a href="/">Home</a>
+        <a href="/#how-it-works">How It Works</a>
+        <a href="/#features">Features</a>
+        <a href="/#analytics-insights">Analytics</a>
+        <a href="/#share-friends">Share</a>
+        <a href="/#screenshots">Screenshots</a>
+        <a href="/#download">Download</a>
+      </nav>
+      <div class="footer-right">
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap">
+          <a href="/terms" class="footer-terms">Terms</a>
+          <a href="/privacy" class="footer-terms">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
-    <script src="js/load-sections.js"></script>
+
     <script src="js/script.js"></script>
   </body>
 </html>

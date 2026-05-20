@@ -17,28 +17,26 @@ async function loadSection(sectionId, filePath) {
   }
 }
 
-// Determine base path based on current page location
 function getBasePath() {
-  // All pages are now at root level, so components are always at root/components/
   return "";
 }
 
-// Load all sections when DOM is ready
 document.addEventListener("DOMContentLoaded", async () => {
   const basePath = getBasePath();
 
-  // Define all possible sections
   const sections = [
     { id: "header-section", file: "header.html" },
     { id: "hero-section", file: "hero.html" },
     { id: "how-it-works-section", file: "how-it-works.html" },
     { id: "features-section", file: "features.html" },
+    { id: "analytics-deep-dive-section", file: "analytics-deep-dive.html" },
+    { id: "share-section", file: "share-section.html" },
     { id: "screenshots-section", file: "screenshots.html" },
+    { id: "referrals-section", file: "referrals.html" },
     { id: "cta-section", file: "cta.html" },
     { id: "footer-section", file: "footer.html" },
   ];
 
-  // Only load sections that exist on the page
   const sectionsToLoad = sections.filter((section) =>
     document.getElementById(section.id)
   );
@@ -49,10 +47,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     )
   );
 
-  // Dispatch event to signal that sections are loaded
   document.dispatchEvent(new Event("sectionsLoaded"));
 
-  // Also initialize after a short delay to ensure DOM is updated
   setTimeout(() => {
     if (window.initializeApp) {
       window.initializeApp();

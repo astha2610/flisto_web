@@ -4,14 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Open in Flisto</title>
+    <meta
+      name="description"
+      content="A friend shared a restaurant or collection with you on Flisto. Open the app to view it or save to your Want to Visit list."
+    />
     <style>
       :root {
         color-scheme: light dark;
-        --bg: #0f0f12;
-        --card: #1a1a21;
-        --text: #f4f4f5;
-        --muted: #a1a1aa;
-        --accent: #8b5cf6;
+        --bg: #fafafa;
+        --card: #ffffff;
+        --text: #1a1a1a;
+        --muted: #666;
+        --accent: #f57c00;
+        --accent-hover: #ff9800;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #1a1a1a;
+          --card: #2d2d2d;
+          --text: #f4f4f5;
+          --muted: #a1a1aa;
+        }
       }
       * {
         box-sizing: border-box;
@@ -28,24 +41,42 @@
         color: var(--text);
       }
       .card {
-        max-width: 400px;
+        max-width: 420px;
         width: 100%;
         background: var(--card);
-        border-radius: 16px;
-        padding: 28px;
+        border-radius: 20px;
+        padding: 32px 28px;
         text-align: center;
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+      }
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--accent);
+        margin-bottom: 0.25rem;
+      }
+      .tagline {
+        font-size: 0.75rem;
+        color: var(--muted);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
       }
       h1 {
-        font-size: 1.25rem;
-        font-weight: 600;
-        margin: 0 0 8px;
+        font-size: 1.35rem;
+        font-weight: 700;
+        margin: 0 0 10px;
+        line-height: 1.3;
       }
       p {
         color: var(--muted);
         font-size: 0.95rem;
-        line-height: 1.5;
-        margin: 0 0 20px;
+        line-height: 1.55;
+        margin: 0 0 12px;
+      }
+      .hint {
+        font-size: 0.85rem;
+        margin-bottom: 22px;
       }
       .btn {
         display: block;
@@ -60,26 +91,41 @@
         cursor: pointer;
       }
       .btn-primary {
-        background: var(--accent);
+        background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
         color: #fff;
+      }
+      .btn-primary:hover {
+        filter: brightness(1.05);
       }
       .stores {
         display: flex;
         gap: 10px;
-        margin-top: 8px;
+        margin-top: 12px;
         flex-wrap: wrap;
         justify-content: center;
       }
       .stores a {
         color: var(--muted);
         font-size: 0.875rem;
+        text-decoration: none;
+      }
+      .stores a:hover {
+        color: var(--accent);
       }
     </style>
   </head>
   <body>
     <div class="card">
+      <div class="logo">Flisto</div>
+      <div class="tagline">Dine. Snap. Remember.</div>
       <h1 id="title">Opening Flisto…</h1>
-      <p id="subtitle">If nothing happens, tap the button below or get the app.</p>
+      <p id="subtitle">
+        A friend shared a restaurant or collection with you. Open Flisto to see
+        their pick—or save it to your Want to Visit list.
+      </p>
+      <p class="hint" id="hint">
+        If nothing happens, tap the button below or download the app.
+      </p>
       <a id="open-app" class="btn btn-primary" href="#">Open in Flisto</a>
       <div class="stores">
         <a href="https://apps.apple.com/app/flisto">App Store</a>
@@ -100,18 +146,19 @@
 
         var titleEl = document.getElementById("title");
         var subEl = document.getElementById("subtitle");
+        var hintEl = document.getElementById("hint");
         var openEl = document.getElementById("open-app");
 
         if (!shareId) {
           titleEl.textContent = "Invalid link";
           subEl.textContent = "This share link is missing an id.";
+          hintEl.style.display = "none";
           openEl.style.display = "none";
           return;
         }
 
         openEl.setAttribute("href", deepLink);
 
-        // Attempt to open the app (works on many mobile browsers when the scheme is registered).
         setTimeout(function () {
           window.location.href = deepLink;
         }, 200);
